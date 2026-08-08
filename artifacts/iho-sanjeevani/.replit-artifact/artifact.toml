@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Project Sanjeevani"
+description = "A high-fidelity homepage prototype for the Indian Health Organization, connecting citizens to a unified digital health ecosystem through one trusted front door."
+version = "1.0.0"
+id = "artifacts/iho-sanjeevani"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19498
+
+[services.development]
+run = "pnpm --filter @workspace/iho-sanjeevani run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/iho-sanjeevani", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/iho-sanjeevani/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19498"
+BASE_PATH = "/"

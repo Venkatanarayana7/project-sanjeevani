@@ -1,0 +1,110 @@
+You are an expert senior front-end developer and UX designer working for the Government of India. You are tasked with building the official homepage of the **Indian Health Organization (IHO)** — also known as **Project Sanjeevani** — a unified digital health ecosystem for 1.4 billion citizens. This is a high-fidelity, production-ready prototype. The website must be visually stunning, incredibly professional, and packed with features, information, and interactions.
+
+Generate a **single, complete HTML file** for the IHO homepage. The file must include embedded CSS and JavaScript. All code must be well-commented and organized. The output must be very long (6000+ lines), with rich content and dummy data. Use modern, semantic HTML5 tags and best practices.
+
+**1. GLOBAL DESIGN SYSTEM:**
+- **Font:** Use Google Fonts 'Poppins' (weights 300,400,500,600,700) and 'Noto Sans' for Indian language support (link CDNs in head).
+- **Icons:** Font Awesome 6 CDN.
+- **Color Palette:**
+  - Primary Navy: `#0B3D6B`
+  - Secondary Blue: `#1A5F8A`
+  - Accent Green: `#2E7D32`
+  - Emergency Orange: `#E65100`
+  - Background Light: `#F4F8FB`
+  - Card White: `#FFFFFF`
+  - Text Dark: `#1a1a1a`
+- **Shadows & Borders:** Cards have `border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);`. Hover lifts with `translateY(-5px)` and stronger shadow.
+- **Buttons:** Rounded, with transition. Primary buttons: navy background. CTA: green. Emergency: orange with pulse animation.
+
+**2. PAGE STRUCTURE (Top to Bottom):**
+
+**A. TOP NAVIGATION BAR (Sticky, always visible):**
+- Left: IHO Logo (use a Font Awesome icon `fa-plus-circle` inside a green circle, and text "Indian Health Organization" with subtitle "Ministry of Health & Family Welfare, Government of India").
+- Center: Quick links: "Home", "About IHO", "Services", "Contact Us", "Grievance". (These can be dummy links).
+- Right: A search icon, a "Health ID Login" button (outlined), and a large pulsing "EMERGENCY" button (orange, with `fa-ambulance` icon).
+- The navbar has a subtle bottom shadow and `z-index: 1000`. On mobile, collapse into a hamburger menu (implement the JS toggle).
+
+**B. HERO SECTION WITH IMAGE SLIDER (Carousel):**
+- Full-width slider with auto-rotation every 4 seconds and manual arrow navigation.
+- Include 4 slides. Each slide has a high-quality placeholder image from Unsplash (use `https://source.unsplash.com/1600x900/?healthcare,india` as placeholder). Overlay a dark gradient so text is readable.
+- Slide 1: Headline "One Nation, One Health ID" and subtext "Empowering 1.4 billion Indians with a unified digital health ecosystem."
+- Slide 2: Headline "Doctor at Your Fingertips" and subtext "Consult Allopathy, Ayurveda, Homeopathy specialists via telemedicine."
+- Slide 3: Headline "Medicines Without Middlemen" and subtext "Generic, low-cost drugs delivered to your doorstep."
+- Slide 4: Headline "Emergency Help in One Tap" and subtext "SOS alerts to nearest hospital and your family instantly."
+- Each slide has a CTA button ("Get Your Health ID Now", "Find a Doctor", etc.).
+- Below the slider, place three small "info badges" horizontally: "1.4B+ Citizens", "50,000+ Hospitals Connected", "100% Secure", with animated counters that count up on scroll.
+
+**C. TWO-COLUMN LAYOUT (Main Content Area):**
+After hero, the page splits into a left sidebar (25% width) and main content area (75% width). On mobile, sidebar becomes a collapsible accordion above content.
+
+**C1. LEFT SIDEBAR:**
+- **Quick Access Panel:** Box with header "Quick Services". Include links as icon+text: "Book Appointment", "Order Medicines", "Check Scheme Eligibility", "Find Blood Bank", "Download Health Records". Each link is styled as a card-like button.
+- **Emergency Panel:** A red-bordered box with a large "SOS EMERGENCY" link that opens `emergency.html`.
+- **Helpline Numbers:** Display a mini card with "National Health Helpline: 1800-XXX-XXX", "Ambulance: 108", "Women Helpline: 1091".
+- **Scheme of the Day:** A small carousel or static highlight of one government scheme (e.g., Ayushman Bharat). Include a "Know More" link.
+- **Language Selector:** Dropdown to select language (English, हिन्दी, తెలుగు, தமிழ், etc.) – dummy, non-functional.
+
+**C2. MAIN CONTENT AREA:**
+Scrolling content with these sections (each separated by a horizontal rule or spacing):
+
+- **Welcome to IHO (Introduction):** 2-3 paragraphs of text explaining what IHO is, its mission, and how it unifies India's health infrastructure. Use a highlighted quote box: "Health is not a privilege; it is a right. Project Sanjeevani is India's promise to every citizen."
+
+- **The IHO Ecosystem (7 Pillars):** Display a grid of 7 cards (3x3 grid). Each card is clickable (links to respective pillar page). Card design:
+  - Large icon (e.g., `fa-id-card` for Health ID) on the left or top.
+  - Pillar name (e.g., "Universal Health ID").
+  - 2-3 line description.
+  - "Explore →" link.
+  - Hover effect: border-left turns green and card lifts.
+  The 7 pillars: Universal Health ID (`health-id.html`), Healer Connect (`healer-connect.html`), Dawa Ghar (`dawa-ghar.html`), Sahayata Emergency (`emergency.html`), Swasthya Yojana (`yojana-hub.html`), Bharat Health Pulse (`health-pulse.html`), Suraksha Kavach (`security.html`).
+
+- **Statistics Section:** A row of 4 counters that animate from zero to the final number on scroll (use Intersection Observer). Counters: "Active Health IDs (in Cr)", "Doctors on Platform", "Medicines Delivered (Lakhs)", "Emergency Responses (per day)". Below each counter, a short description.
+
+- **How It Works (Design Thinking Process):** A step-by-step visual of the 5 stages of Design Thinking, showing how we built IHO:
+  - Step 1: Empathize (icon: people, text: "We listened to rural patients, urban doctors, and health workers.")
+  - Step 2: Define (icon: target, text: "We identified fragmented access, opaque pricing, and emergency delays.")
+  - Step 3: Ideate (icon: lightbulb, text: "We brainstormed a unified ecosystem with 7 core pillars.")
+  - Step 4: Prototype (icon: code, text: "We built this fully interactive high-fidelity digital prototype.")
+  - Step 5: Test (icon: check-circle, text: "We are presenting this prototype for feedback to shape a national launch.")
+  Style as a horizontal timeline or numbered cards.
+
+- **Meet Our Team (The Architects):** Show 5 team member cards in a row (you said one boy and four girls). Each card has:
+  - A circular placeholder image (use `https://ui-avatars.com/api/?name=Team+Member&size=200&background=random`).
+  - Name (dummy, you can edit later).
+  - Role (e.g., "Team Leader & Full-Stack Developer", "UI/UX Designer", "Data & Security Lead", etc.).
+  - A short quote about their contribution.
+  - LinkedIn icon link (dummy).
+  This section shows that real students built this, adding a human touch.
+
+- **News & Updates Section:** A horizontally scrollable row of news cards (like a blog feed). Each card has an image (unsplash health), headline "IHO Pilots in 5 States", "New Ayush Integration Launched", etc., and a "Read More" link. (All dummy content.)
+
+- **Testimonials / Vision:** A quote slider or static block with a prominent quote from a fictional citizen: "With IHO, my mother got her diabetes medicine for ₹50 instead of ₹500. This is a revolution." — Radha, Rural Telangana.
+
+- **Call-to-Action Banner:** Full-width green background. Text: "Ready to join India's health revolution? Get your free Health ID today." Button: "Create Health ID".
+
+**D. FOOTER:**
+Massive, multi-column footer with dark navy background `#0B3D6B`, white text.
+- Column 1: IHO Logo and brief description.
+- Column 2: "Quick Links" (Home, About, Services, etc.).
+- Column 3: "Important Links" (National Health Portal, Ministry of Health, Ayushman Bharat, MyGov).
+- Column 4: "Contact Us" with address (dummy), phone, email.
+- Bottom strip: "© 2025 Indian Health Organization - Project Sanjeevani. A Student Design Thinking Prototype. All data is simulated for demonstration purposes." and "Privacy Policy | Terms of Service".
+
+**3. JAVASCRIPT INTERACTIONS:**
+- Hero slider auto-rotation with dots and arrows.
+- Mobile hamburger menu toggle for navbar and sidebar.
+- Animated counters using Intersection Observer (when element in view, count up).
+- Smooth scrolling when clicking navbar links.
+- Back-to-top button that appears when scrolling down 500px.
+- Any other subtle interactions that enhance UX.
+
+**4. RESPONSIVENESS:**
+- Use CSS Grid and Flexbox.
+- On tablets (< 1024px), two-column layout becomes single column. Sidebar goes above content as horizontal quick links.
+- On mobile (< 768px), everything stacks. Font sizes scale down. Hamburger menu works.
+
+**5. IMPORTANT NOTES FOR GENERATION:**
+- Generate the complete HTML document with all styles and scripts inline.
+- Use placeholder images from `https://source.unsplash.com/featured/?health,india` for hero slides, news cards, etc. Make each slide image URL slightly different (add a query string like `?sig=1`, `?sig=2`).
+- The content should be thorough; do not use lorem ipsum. Write meaningful, Government of India-style English.
+- Include many comments in code explaining sections.
+- The final code should be at least 6000 lines (but prioritize quality, depth, and professionalism).
