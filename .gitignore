@@ -1,15 +1,17 @@
 # See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# compiled output
+# compiled output and TypeScript build cache
 dist
 tmp
 out-tsc
-*.tsbuildinfo
+*.tsbuildinfo 
 .expo
 .expo-shared
 
-# dependencies
+# dependencies and Node modules and build ouput
 node_modules
+build
+coverage
 
 # IDEs and editors
 /.idea
@@ -27,13 +29,15 @@ node_modules
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# misc
+# misc and Logs
 /.sass-cache
 /connect.lock
 /coverage
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
+yarn-debug.log
+pnpm-debug.log
 testem.log
 /typings
 
@@ -44,6 +48,14 @@ Thumbs.db
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 
-# Replit
+# few files Replit
 .cache/
 .local/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+
+

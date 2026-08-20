@@ -64,10 +64,10 @@ const quickServices = [
 
 const team = [
   { initials: 'GV', name: 'Guvvala Venkata Narayana', role: 'Chief Architect · Integration', quote: 'We are not doctors. We are architects of the bridge.' },
-  { initials: 'AS', name: 'Aaradhya S.', role: 'Empathy & Experience Lead', quote: 'Trust begins when a system feels understandable.' },
-  { initials: 'PK', name: 'Pavani K.', role: 'Data & Logic Lead', quote: 'Good information should travel as far as need does.' },
-  { initials: 'NR', name: 'Nandini R.', role: 'Systems & Integration', quote: 'The golden hour is a design problem we can solve.' },
-  { initials: 'SH', name: 'Sahithi H.', role: 'Innovation & Future Tech', quote: 'A prototype can be a promise with working edges.' },
+  { initials: 'SN', name: 'Shaik Nusrath', role: 'Empathy & Experience Lead', quote: 'Trust begins when a system feels understandable.' },
+  { initials: 'SS', name: 'Shaik Sameera', role: 'Data & Logic Lead', quote: 'Good information should travel as far as need does.' },
+  { initials: 'VG', name: 'Vikram Gayatri', role: 'Systems & Integration', quote: 'The golden hour is a design problem we can solve.' },
+  { initials: 'JB', name: 'Jegini Bhargavi', role: 'Innovation & Future Tech', quote: 'A prototype can be a promise with working edges.' },
 ];
 
 const updates = [
